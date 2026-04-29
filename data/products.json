@@ -1,0 +1,142 @@
+{
+  "store": {
+    "name": "Hi Cookie",
+    "tagline": "Cookies decorados artesanais feitos com amor e criatividade",
+    "description": "Transformamos momentos especiais em doces obras de arte. Cada cookie é feito à mão com ingredientes selecionados e decorado com técnicas de glacê real, pintura comestível e modelagem artística.",
+    "contact": {
+      "email": "",
+      "phone": "",
+      "instagram": "",
+      "address": ""
+    }
+  },
+  "categories": [
+    { "id": "cha-de-bebe", "name": "Chá de Bebê & 1º Aninho", "description": "Cookies personalizados para celebrar a chegada e o primeiro aninho do seu bebê", "icon": "🎀" },
+    { "id": "batizado", "name": "Batizado & Religioso", "description": "Lembrancinhas e cookies temáticos para celebrações religiosas", "icon": "✝️" },
+    { "id": "aniversario", "name": "Aniversário Infantil", "description": "Sets temáticos completos para festas de aniversário inesquecíveis", "icon": "🎂" },
+    { "id": "personagens", "name": "Personagens & Licenciados", "description": "Seus personagens favoritos de Disney, Pokémon e muito mais transformados em cookies", "icon": "⭐" },
+    { "id": "tematicos", "name": "Temáticos & Especiais", "description": "Cookies criativos com temas únicos para ocasiões especiais", "icon": "🎨" }
+  ],
+  "products": [
+    {
+      "id": 1, "slug": "cha-de-bebe-menina-ab", "name": "Conjunto Chá de Bebê — Bonequinha Rosa", "shortName": "Bonequinha Rosa",
+      "description": "Conjunto encantador de cookies decorados para celebração de bebê. Destaque para a bonequinha com vestido rosa e iniciais personalizáveis, acompanhada de laços delicados e corações — tudo em tons suaves de rosa e branco, feito com glacê real.",
+      "longDescription": "Um verdadeiro mimo para celebrar a chegada da sua princesinha! Este conjunto exclusivo traz uma bonequinha adorável vestida de rosa com as iniciais do bebê, cercada por cookies com lacinhos, flores e corações. Cada peça é pintada à mão com glacê real em tons delicados de rosa e branco, criando uma harmonia perfeita para decoração de mesa ou lembrancinhas.",
+      "category": "cha-de-bebe", "tags": ["chá de bebê", "menina", "rosa", "personalizado", "iniciais", "bonequinha"],
+      "image": "/images/01-cha-de-bebe-bonequinha.jpg", "featured": true, "occasion": "Chá de Bebê / 1º Aninho", "minOrder": 12,
+      "techniques": ["Glacê real", "Pintura à mão", "Modelagem 3D"]
+    },
+    {
+      "id": 2, "slug": "monograma-borboletas", "name": "Monograma com Borboletas", "shortName": "Monograma Borboletas",
+      "description": "Cookies elegantes em formato de placa com iniciais em rosa suave, decorados com borboletas pintadas à mão e lacinhos em glacê real. Perfeitos para lembrancinhas personalizadas de chá de bebê ou aniversário.",
+      "longDescription": "Elegância e delicadeza em cada detalhe! Estes cookies em formato de placa trazem as iniciais do bebê em relevo com glacê rosa claro, emoldurados por borboletas pintadas à mão e lacinhos em 3D. Ideais como lembrancinhas personalizadas que encantam todos os convidados.",
+      "category": "cha-de-bebe", "tags": ["monograma", "borboletas", "iniciais", "placa", "lembrancinha", "personalizado"],
+      "image": "/images/02-monograma-borboletas.jpg", "featured": false, "occasion": "Chá de Bebê / 1º Aninho", "minOrder": 10,
+      "techniques": ["Glacê real", "Pintura à mão", "Lettering"]
+    },
+    {
+      "id": 3, "slug": "corrida-carrinhos", "name": "Set Corrida de Carrinhos", "shortName": "Corrida de Carrinhos",
+      "description": "Conjunto temático de corrida com carrinhos vibrantes em laranja, amarelo e vermelho, placa 'PARE', semáforo, pneu em chamas e bandeira quadriculada. Personalizado com o nome da criança — ideal para festas de aniversário de menino.",
+      "longDescription": "Acelere na diversão! Este set completo de corrida traz carrinhos coloridos com detalhes realistas, incluindo placas de PARE, semáforo funcional em miniatura, pneu com chamas e a bandeira quadriculada da vitória. Cada cookie pode ser personalizado com o nome e idade do aniversariante.",
+      "category": "aniversario", "tags": ["corrida", "carrinhos", "menino", "aniversário", "personalizado", "semáforo"],
+      "image": "/images/03-corrida-carrinhos.jpg", "featured": true, "occasion": "Aniversário Infantil", "minOrder": 12,
+      "techniques": ["Glacê real", "Pintura comestível", "Relevo 3D"]
+    },
+    {
+      "id": 4, "slug": "batizado-ovelhinha", "name": "Lembrancinhas Batizado — Ovelhinha", "shortName": "Batizado Ovelhinha",
+      "description": "Lembrancinhas de batizado com cookies de ovelhinhas fofas e cruzes com rosas em glacê, embalados individualmente com fita xadrez e pompons decorativos. Prontos para presentear os convidados!",
+      "longDescription": "Lembrancinhas que tocam o coração! Cada pacotinho traz uma ovelhinha fofa com lacinho e um cookie de cruz decorado com rosas em glacê real, cuidadosamente embalados com fita xadrez azul e pompons decorativos.",
+      "category": "batizado", "tags": ["batizado", "ovelhinha", "cruz", "lembrancinha", "embalado", "religioso"],
+      "image": "/images/04-batizado-ovelhinha.jpg", "featured": true, "occasion": "Batizado", "minOrder": 20,
+      "techniques": ["Glacê real", "Modelagem 3D", "Embalagem decorativa"]
+    },
+    {
+      "id": 5, "slug": "bela-e-a-fera", "name": "A Bela e a Fera — Disney", "shortName": "A Bela e a Fera",
+      "description": "Cookies artísticos inspirados no clássico Disney com Bela, Zip (xícara), Horloge, Madame Samovar e rosas vermelhas com detalhes em dourado metálico. Nível de arte impressionante em cada peça!",
+      "longDescription": "A magia da Disney em forma de cookie! Este conjunto traz os personagens mais amados de A Bela e a Fera: a princesa Bela em seu vestido dourado, Zip com seu sorriso cativante, e as icônicas rosas vermelhas com detalhes em pó dourado comestível.",
+      "category": "personagens", "tags": ["disney", "bela e a fera", "princesa", "personagens", "dourado", "rosa vermelha"],
+      "image": "/images/05-bela-e-a-fera.jpg", "featured": true, "occasion": "Aniversário / Festa Temática", "minOrder": 10,
+      "techniques": ["Glacê real", "Pintura à mão", "Pó dourado comestível"]
+    },
+    {
+      "id": 6, "slug": "pokemon", "name": "Coleção Pokémon", "shortName": "Pokémon",
+      "description": "Coleção vibrante dos Pokémon mais amados: Squirtle, Pikachu, Bulbasaur, Charizard, Eevee e Jigglypuff. Cada personagem pintado à mão com detalhes fiéis ao anime — perfeito para fãs de todas as idades!",
+      "longDescription": "Gotta catch 'em all... em forma de cookie! Esta coleção traz os Pokémon mais icônicos, cada um pintado à mão com cores vibrantes e detalhes fiéis ao anime original.",
+      "category": "personagens", "tags": ["pokémon", "pikachu", "squirtle", "anime", "geek", "personagens"],
+      "image": "/images/06-pokemon.jpg", "featured": true, "occasion": "Aniversário / Festa Geek", "minOrder": 8,
+      "techniques": ["Glacê real", "Pintura à mão", "Cores vibrantes"]
+    },
+    {
+      "id": 7, "slug": "cha-de-bebe-conjunto-completo", "name": "Chá de Bebê Rosa — Conjunto Completo", "shortName": "Bebê Rosa Completo",
+      "description": "Vista geral do conjunto completo para celebração de 1 aninho: bonequinha, monogramas, número '1' com flores, laços delicados e uma rosa volumosa em glacê rosa — tudo harmonizado em tons de rosa e branco.",
+      "longDescription": "O pacote completo para uma celebração inesquecível! Este conjunto reúne todos os elementos essenciais para decorar a mesa do chá de bebê ou 1º aninho.",
+      "category": "cha-de-bebe", "tags": ["conjunto completo", "chá de bebê", "1 aninho", "rosa", "menina", "decoração mesa"],
+      "image": "/images/07-cha-bebe-completo.jpg", "featured": false, "occasion": "Chá de Bebê / 1º Aninho", "minOrder": 15,
+      "techniques": ["Glacê real", "Pintura à mão", "Modelagem 3D", "Lettering"]
+    },
+    {
+      "id": 8, "slug": "limao-siciliano-fiorella", "name": "Limão Siciliano — Festa Jardim", "shortName": "Limão Siciliano",
+      "description": "Cookies frescos e elegantes em tema limão siciliano: limões inteiros com folhas verdes, fatias detalhadas e ramos botânicos. Perfeitos para festas com tema jardim italiano, chá de cozinha ou eventos ao ar livre.",
+      "longDescription": "Frescor e elegância em cada mordida! Inspirados na Riviera Italiana, estes cookies trazem limões sicilianos com folhas verdes esculpidas, fatias com gomos detalhados e ramos botânicos delicados.",
+      "category": "tematicos", "tags": ["limão", "siciliano", "jardim", "botânico", "elegante", "festa jardim"],
+      "image": "/images/08-limao-siciliano.jpg", "featured": true, "occasion": "Festa Jardim / Chá de Cozinha", "minOrder": 12,
+      "techniques": ["Glacê real", "Modelagem de folhas", "Pintura botânica"]
+    },
+    {
+      "id": 9, "slug": "patrulha-canina", "name": "Patrulha Canina 3D", "shortName": "Patrulha Canina",
+      "description": "Cookies 3D dos personagens Rubble, Zuma e Skye, montados sobre bases — ficam literalmente em pé! Técnica impressionante de cookies tridimensionais, perfeitos para decoração de mesa de festa infantil.",
+      "longDescription": "A Patrulha Canina entrou em ação... na mesa de doces! Rubble, Zuma e Skye ganham vida em cookies tridimensionais que ficam em pé, montados sobre bases decoradas.",
+      "category": "personagens", "tags": ["patrulha canina", "paw patrol", "3D", "rubble", "zuma", "skye", "festa infantil"],
+      "image": "/images/09-patrulha-canina.jpg", "featured": true, "occasion": "Aniversário Infantil", "minOrder": 6,
+      "techniques": ["Glacê real", "Cookie 3D em pé", "Pintura à mão"]
+    },
+    {
+      "id": 10, "slug": "jardim-encantado-luisa", "name": "Jardim Encantado — 1º Aninho", "shortName": "Jardim Encantado",
+      "description": "Conjunto delicado para 1º aninho com borboletas em diferentes texturas de rosa, margaridas brancas, casinha de passarinho lilás com coração e flores. Personalizado com nome e idade.",
+      "longDescription": "Um jardim mágico de doçura para o primeiro aninho! Este conjunto encantador traz borboletas em diferentes estilos e texturas de rosa, margaridas brancas com miolo pink, uma casinha de passarinho lilás com coração.",
+      "category": "cha-de-bebe", "tags": ["jardim encantado", "borboleta", "1 aninho", "margarida", "casinha", "menina"],
+      "image": "/images/10-jardim-encantado.jpg", "featured": false, "occasion": "1º Aninho", "minOrder": 12,
+      "techniques": ["Glacê real", "Textura em glacê", "Pintura à mão"]
+    },
+    {
+      "id": 11, "slug": "circo-dom", "name": "Circo Mágico — 1º Aninho", "shortName": "Circo Mágico",
+      "description": "Conjunto circense vibrante para o 1º aninho! Tenda de circo em vermelho e azul, cartola mágica, canhão de confete, número '1' iluminado, nariz de palhaço com óculos e placa personalizada.",
+      "longDescription": "Senhoras e senhores, bem-vindos ao maior espetáculo da confeitaria! Este set de circo traz toda a magia do picadeiro em cookies com cores vibrantes e detalhes que impressionam!",
+      "category": "aniversario", "tags": ["circo", "mágico", "1 aninho", "tenda", "colorido", "menino"],
+      "image": "/images/11-circo-magico.jpg", "featured": false, "occasion": "Aniversário / 1º Aninho", "minOrder": 12,
+      "techniques": ["Glacê real", "Relevo 3D", "Cores vibrantes"]
+    },
+    {
+      "id": 12, "slug": "batizado-helena", "name": "Batizado — Mensagens de Fé", "shortName": "Batizado Mensagens",
+      "description": "Cookies espirituais e delicados para batizado com ovelhinhas com lacinho rosa, ramo de oliveira, e mensagens tocantes como 'O Senhor é o meu pastor' e 'Amada por um Deus bom'. Personalizados com o nome do bebê.",
+      "longDescription": "Fé e doçura em cada detalhe! Este conjunto para batizado combina ovelhinhas com lacinho rosa, ramos de oliveira e mensagens bíblicas escritas à mão.",
+      "category": "batizado", "tags": ["batizado", "ovelhinha", "mensagem", "bíblico", "personalizado", "fé"],
+      "image": "/images/12-batizado-mensagens.jpg", "featured": false, "occasion": "Batizado", "minOrder": 15,
+      "techniques": ["Glacê real", "Lettering à mão", "Pintura delicada"]
+    },
+    {
+      "id": 13, "slug": "jesus-religioso", "name": "Jesus — Cookie Artístico Religioso", "shortName": "Jesus Artístico",
+      "description": "Cookie artístico de Jesus Cristo em estilo fofo com braços abertos e sorriso acolhedor, vestindo túnica branca com manto vermelho. Perfeita para celebrações religiosas, batizados e Páscoa.",
+      "longDescription": "Uma peça que emociona e encanta! Este cookie artístico de Jesus Cristo é esculpido e pintado à mão em estilo fofo e acolhedor.",
+      "category": "batizado", "tags": ["jesus", "religioso", "artístico", "batizado", "páscoa", "comunhão"],
+      "image": "/images/13-jesus-religioso.jpg", "featured": true, "occasion": "Batizado / Páscoa / Primeira Comunhão", "minOrder": 1,
+      "techniques": ["Glacê real", "Modelagem 3D avançada", "Pintura artística"]
+    },
+    {
+      "id": 14, "slug": "fundo-do-mar", "name": "Fundo do Mar — Oceano Encantado", "shortName": "Fundo do Mar",
+      "description": "Coleção encantadora do oceano com polvinho verde-água, estrelas-do-mar vermelhas, cavalo-marinho azul, tartaruga marinha, corais e corações com ondas na areia. Ideal para festa na praia!",
+      "longDescription": "Mergulhe nessa fofura! Esta coleção traz o melhor do fundo do mar em cookies decorados com uma paleta aquática encantadora.",
+      "category": "tematicos", "tags": ["fundo do mar", "oceano", "polvo", "estrela do mar", "praia", "aquático"],
+      "image": "/images/14-fundo-do-mar.jpg", "featured": true, "occasion": "Aniversário / Festa na Praia", "minOrder": 10,
+      "techniques": ["Glacê real", "Textura realista", "Pintura aquarela"]
+    },
+    {
+      "id": 15, "slug": "mickey-cowboy", "name": "Mickey Cowboy — Faroeste Disney", "shortName": "Mickey Cowboy",
+      "description": "Mickey Mouse vestido de cowboy com chapéu e lenço vermelho, acompanhado de botas, rodas de carroça, cactos e chapéus de vaqueiro. Fusão criativa de Disney com tema faroeste!",
+      "longDescription": "Yeehaw com o Mickey! Este set exclusivo combina a magia Disney com o charme do faroeste americano em tons terrosos e rústicos.",
+      "category": "personagens", "tags": ["mickey", "disney", "cowboy", "faroeste", "vaqueiro", "western"],
+      "image": "/images/15-mickey-cowboy.jpg", "featured": false, "occasion": "Aniversário / Festa Temática", "minOrder": 12,
+      "techniques": ["Glacê real", "Pintura à mão", "Detalhes rústicos"]
+    }
+  ]
+}

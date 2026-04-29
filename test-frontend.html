@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi Cookie — Teste do Backend</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0d13;
+      --surface: #1a1720;
+      --surface2: #242030;
+      --pink: #f472b6;
+      --pink-glow: #ec489960;
+      --gold: #fbbf24;
+      --text: #f0edf5;
+      --text2: #9b95a8;
+      --radius: 16px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Outfit',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
+
+    /* Header */
+    header {
+      text-align:center; padding:48px 20px 32px;
+      background: linear-gradient(180deg, #1e1a28 0%, var(--bg) 100%);
+    }
+    header h1 { font-size:3rem; font-weight:800; }
+    header h1 span { color:var(--pink); }
+    header p { color:var(--text2); font-size:1.1rem; margin-top:8px; max-width:500px; margin-inline:auto; }
+
+    /* Stats */
+    .stats {
+      display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+      padding:0 20px 32px;
+    }
+    .stat {
+      background:var(--surface); border:1px solid #2d2838;
+      border-radius:12px; padding:16px 28px; text-align:center;
+      min-width:140px;
+    }
+    .stat .num { font-size:2rem; font-weight:700; color:var(--pink); }
+    .stat .label { font-size:.85rem; color:var(--text2); margin-top:4px; }
+
+    /* Filters */
+    .filters {
+      display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
+      padding:0 20px 32px;
+    }
+    .filters button {
+      background:var(--surface); border:1px solid #2d2838; color:var(--text2);
+      padding:10px 20px; border-radius:50px; cursor:pointer;
+      font-family:inherit; font-size:.9rem; transition:all .25s;
+    }
+    .filters button:hover, .filters button.active {
+      background:var(--pink); color:#fff; border-color:var(--pink);
+      box-shadow:0 0 20px var(--pink-glow);
+    }
+
+    /* Search */
+    .search-wrap {
+      max-width:500px; margin:0 auto 32px; padding:0 20px;
+    }
+    .search-wrap input {
+      width:100%; padding:14px 20px; border-radius:50px;
+      border:1px solid #2d2838; background:var(--surface); color:var(--text);
+      font-family:inherit; font-size:1rem; outline:none; transition:border .3s;
+    }
+    .search-wrap input:focus { border-color:var(--pink); box-shadow:0 0 15px var(--pink-glow); }
+
+    /* Grid */
+    .grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+      gap:24px; padding:0 32px 60px; max-width:1300px; margin:auto;
+    }
+
+    /* Card */
+    .card {
+      background:var(--surface); border-radius:var(--radius); overflow:hidden;
+      border:1px solid #2d2838; transition:transform .3s, box-shadow .3s;
+      display:flex; flex-direction:column;
+    }
+    .card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 12px 40px rgba(0,0,0,.4), 0 0 20px var(--pink-glow);
+    }
+    .card img {
+      width:100%; height:280px; object-fit:cover;
+      border-bottom:1px solid #2d2838;
+    }
+    .card-body { padding:20px; flex:1; display:flex; flex-direction:column; }
+    .card-body h3 { font-size:1.15rem; font-weight:600; margin-bottom:6px; }
+    .card-body .occasion {
+      font-size:.78rem; color:var(--pink); font-weight:500;
+      margin-bottom:10px; text-transform:uppercase; letter-spacing:.5px;
+    }
+    .card-body p { font-size:.9rem; color:var(--text2); line-height:1.5; flex:1; }
+    .card-tags { padding:0 20px 16px; display:flex; flex-wrap:wrap; gap:6px; }
+    .tag {
+      background:var(--surface2); font-size:.72rem; padding:4px 10px;
+      border-radius:50px; color:var(--text2);
+    }
+    .card-footer {
+      padding:12px 20px; border-top:1px solid #2d2838;
+      display:flex; justify-content:space-between; align-items:center;
+      font-size:.82rem; color:var(--text2);
+    }
+    .badge-featured {
+      background:linear-gradient(135deg,var(--gold),#f59e0b);
+      color:#000; font-size:.7rem; font-weight:600; padding:3px 10px;
+      border-radius:50px;
+    }
+
+    /* Empty */
+    .empty { text-align:center; padding:60px 20px; color:var(--text2); grid-column:1/-1; }
+    .empty span { font-size:3rem; display:block; margin-bottom:12px; }
+
+    /* API Status */
+    .api-status {
+      position:fixed; bottom:20px; right:20px; padding:10px 18px;
+      border-radius:50px; font-size:.8rem; font-weight:500; z-index:99;
+    }
+    .api-status.ok { background:#059669; color:#fff; }
+    .api-status.err { background:#dc2626; color:#fff; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🍪 Hi <span>Cookie</span></h1>
+  <p>Teste do Backend — Verificando API, imagens e dados</p>
+</header>
+
+<div class="stats" id="stats"></div>
+
+<div class="search-wrap">
+  <input type="text" id="search" placeholder="🔍 Buscar cookies... (ex: disney, pokemon, batizado)">
+</div>
+
+<div class="filters" id="filters"></div>
+
+<div class="grid" id="grid"></div>
+
+<div class="api-status" id="apiStatus">⏳ Conectando...</div>
+
+<script>
+const API = 'http://localhost:3001';
+let allProducts = [];
+let categories = [];
+let activeFilter = 'all';
+
+async function init() {
+  try {
+    const [storeRes, catRes, prodRes] = await Promise.all([
+      fetch(`${API}/api/store`).then(r => r.json()),
+      fetch(`${API}/api/categories`).then(r => r.json()),
+      fetch(`${API}/api/products`).then(r => r.json())
+    ]);
+
+    categories = catRes.data;
+    allProducts = prodRes.data;
+
+    document.getElementById('apiStatus').className = 'api-status ok';
+    document.getElementById('apiStatus').textContent = '✅ API Online — localhost:3001';
+
+    renderStats(storeRes.data, prodRes);
+    renderFilters();
+    renderGrid(allProducts);
+  } catch (e) {
+    document.getElementById('apiStatus').className = 'api-status err';
+    document.getElementById('apiStatus').textContent = '❌ API Offline';
+    document.getElementById('grid').innerHTML = `
+      <div class="empty"><span>😵</span>Não foi possível conectar à API.<br>Rode <b>npm run dev</b> primeiro.</div>`;
+  }
+}
+
+function renderStats(store, prodRes) {
+  const featured = allProducts.filter(p => p.featured).length;
+  const tags = [...new Set(allProducts.flatMap(p => p.tags))].length;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><div class="num">${prodRes.total}</div><div class="label">Produtos</div></div>
+    <div class="stat"><div class="num">${categories.length}</div><div class="label">Categorias</div></div>
+    <div class="stat"><div class="num">${featured}</div><div class="label">Destaques</div></div>
+    <div class="stat"><div class="num">${tags}</div><div class="label">Tags</div></div>
+  `;
+}
+
+function renderFilters() {
+  const html = [`<button class="active" onclick="filter('all')">Todos</button>`];
+  html.push(`<button onclick="filter('featured')">⭐ Destaques</button>`);
+  categories.forEach(c => {
+    html.push(`<button onclick="filter('${c.id}')">${c.icon} ${c.name}</button>`);
+  });
+  document.getElementById('filters').innerHTML = html.join('');
+}
+
+function filter(cat) {
+  activeFilter = cat;
+  document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  let filtered = allProducts;
+  if (cat === 'featured') filtered = allProducts.filter(p => p.featured);
+  else if (cat !== 'all') filtered = allProducts.filter(p => p.category === cat);
+
+  const search = document.getElementById('search').value.toLowerCase();
+  if (search) filtered = filtered.filter(p =>
+    p.name.toLowerCase().includes(search) ||
+    p.description.toLowerCase().includes(search) ||
+    p.tags.some(t => t.includes(search))
+  );
+  renderGrid(filtered);
+}
+
+function renderGrid(products) {
+  if (!products.length) {
+    document.getElementById('grid').innerHTML = `
+      <div class="empty"><span>🔍</span>Nenhum cookie encontrado</div>`;
+    return;
+  }
+  document.getElementById('grid').innerHTML = products.map(p => `
+    <div class="card">
+      <img src="${API}/${p.image}" alt="${p.shortName}" loading="lazy"
+           onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 280%22><rect fill=%22%231a1720%22 width=%22300%22 height=%22280%22/><text fill=%22%239b95a8%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2214%22>Imagem não encontrada</text></svg>'">
+      <div class="card-body">
+        <div class="occasion">${p.occasion}</div>
+        <h3>${p.name}</h3>
+        <p>${p.description}</p>
+      </div>
+      <div class="card-tags">
+        ${p.tags.slice(0,4).map(t => `<span class="tag">${t}</span>`).join('')}
+      </div>
+      <div class="card-footer">
+        <span>Mín: ${p.minOrder} un.</span>
+        ${p.featured ? '<span class="badge-featured">★ DESTAQUE</span>' : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+document.getElementById('search').addEventListener('input', () => {
+  const search = document.getElementById('search').value.toLowerCase();
+  let filtered = activeFilter === 'featured' ? allProducts.filter(p => p.featured) :
+    activeFilter !== 'all' ? allProducts.filter(p => p.category === activeFilter) : allProducts;
+  if (search) filtered = filtered.filter(p =>
+    p.name.toLowerCase().includes(search) ||
+    p.description.toLowerCase().includes(search) ||
+    p.tags.some(t => t.includes(search))
+  );
+  renderGrid(filtered);
+});
+
+init();
+</script>
+</body>
+</html>

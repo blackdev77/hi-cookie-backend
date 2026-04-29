@@ -1,0 +1,17 @@
+{
+  "name": "hi-cookie-backend",
+  "version": "1.0.0",
+  "description": "Backend API para Hi Cookie — Loja de Cookies Decorados Artesanais",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["cookie", "bakery", "api"],
+  "author": "Hi Cookie",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
+  }
+}
