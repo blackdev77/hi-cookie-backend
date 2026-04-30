@@ -12,7 +12,8 @@ a{text-decoration:none;color:inherit}
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:all .4s}
 .nav.scrolled{background:rgba(255,248,240,.85);backdrop-filter:blur(20px);box-shadow:var(--shadow);padding:10px 0}
 .nav-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Great Vibes',cursive;font-size:2rem;font-weight:400;color:var(--brown)}
+.logo{font-family:'Great Vibes',cursive;font-size:2rem;font-weight:400;color:var(--brown);display:flex;align-items:center;gap:10px}
+.brand-logo{height:40px;width:auto;border-radius:50%}
 .logo span{color:var(--rose-dark)}
 .nav-links{display:flex;gap:32px;list-style:none}
 .nav-links a{font-size:.9rem;font-weight:500;color:var(--text2);transition:color .3s;position:relative}
@@ -119,7 +120,8 @@ section{padding:100px 0}
 
 /* FOOTER */
 .footer{background:var(--brown);color:rgba(255,255,255,.6);padding:48px 0 24px;text-align:center}
-.footer-logo{font-family:'Great Vibes',cursive;font-size:2rem;color:var(--white);margin-bottom:8px}
+.footer-logo{font-family:'Great Vibes',cursive;font-size:2rem;color:var(--white);margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:10px}
+.brand-logo-footer{height:40px;width:auto;border-radius:50%}
 .footer-logo span{color:var(--rose)}
 .footer p{font-size:.85rem;margin-bottom:6px}
 .footer-copy{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.75rem}
