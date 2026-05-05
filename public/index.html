@@ -4,165 +4,318 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hi Cookie — Biscoitos Decorados Artesanais</title>
-  <meta name="description" content="Cookies decorados artesanais feitos com amor. Chá de bebê, batizado, aniversário, personagens Disney, Pokémon e mais. Peça pelo WhatsApp!">
-  <meta name="keywords" content="cookies decorados, biscoitos artesanais, chá de bebê, batizado, aniversário infantil, lembrancinhas">
-  <meta property="og:title" content="Hi Cookie — Biscoitos Decorados Artesanais">
-  <meta property="og:description" content="Transformamos momentos especiais em doces obras de arte. Cookies feitos à mão com glacê real.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#4A2C2A">
+  <meta name="description" content="Cookies decorados artesanais feitos com amor. Chá de bebê, batizado, aniversário, personagens Disney, Pokémon e mais.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍪</text></svg>">
   <link rel="stylesheet" href="/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="nav" id="navbar">
-  <div class="container nav-inner">
-    <a href="#" class="logo"><img src="/images/logo.jpg" alt="Hi Cookie Logo" class="brand-logo"> Hi <span>Cookie</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#categorias">Categorias</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-    <a href="https://wa.me/5577998048557?text=Olá! Gostaria de fazer um pedido de cookies 🍪" target="_blank" rel="noopener noreferrer" class="nav-cta">Fazer Pedido</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-top-border"></div>
-  <div class="floating-decor fd-1">🌸</div>
-  <div class="floating-decor fd-2">🌿</div>
-  <div class="floating-decor fd-3">♥</div>
-  <div class="floating-decor fd-4">🌸</div>
-  <div class="floating-decor fd-5">♥</div>
-  <div class="container hero-content">
-    <div class="hero-badge">♥ Pequenos gestos, grandes lembranças</div>
-    <h1>Transformamos momentos em <br><em>doces obras de arte</em></h1>
-    <p>Cookies decorados artesanais para chá de bebê, batizado, aniversário e eventos especiais. Cada peça é única, pintada à mão com técnicas de glacê real.</p>
-    <div class="hero-btns">
-      <a href="https://wa.me/5577998048557?text=Olá! Gostaria de fazer um pedido de cookies 🍪" target="_blank" rel="noopener noreferrer" class="btn-primary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.496A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.287 0-4.404-.744-6.122-2.003l-.428-.322-2.646.887.886-2.642-.335-.437A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Pedir pelo WhatsApp
-      </a>
-      <a href="#galeria" class="btn-outline">Ver Galeria ↓</a>
-    </div>
-  </div>
-  <div class="hero-image">
-    <img id="hero-img" src="/images/05-bela-e-a-fera.jpg" alt="Cookie decorado artesanal" style="border-radius:24px; box-shadow:0 12px 40px rgba(217,107,133,0.15); width:100%; max-height:80vh; object-fit:cover;">
-  </div>
-  <div class="hero-decor"></div>
-</section>
-
-<!-- SOBRE -->
-<section class="about" id="sobre">
-  <div class="container about-grid">
-    <div class="about-img reveal">
-      <img src="/images/owner.jpg" alt="Dona da Hi Cookie" style="object-fit:cover; border-radius:var(--radius); width:100%; height:100%;">
-    </div>
-    <div class="about-text">
-      <p class="section-label" style="text-align:left">Nossa História</p>
-      <h2 class="reveal">Cada cookie conta uma história</h2>
-      <p class="reveal">Sou bacharel em Administração — ou seja, sei organizar a vida… e os biscoitos também 😄. Sou mãe de dois, esposa, cristã e apaixonada por transformar ideias em algo real. A confeitaria entrou na minha vida e ficou, porque criar com as mãos e com o coração é exatamente o que eu amo fazer.</p>
-      <p class="reveal">Amo rosa (sim, bastante 💗), mas sem exagero e sem “mangas fru-fru”. Gosto do simples, do bonito e do que tem propósito. A Hi Cookies é isso: zero frescura, 100% verdade — apenas eu, minha essência e um amor enorme por cada detalhe (e um leve vício em açúcar, confesso).</p>
-      <div class="techniques reveal">
-        <span class="tech-badge">🎨 Glacê Real</span>
-        <span class="tech-badge">✍️ Pintura à Mão</span>
-        <span class="tech-badge">🏗️ Modelagem 3D</span>
-        <span class="tech-badge">✨ Pó Dourado</span>
-        <span class="tech-badge">🖌️ Lettering</span>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        Produção artesanal feita com amor em cada detalhe <span>♥</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://instagram.com/hicookielem" target="_blank"><i data-lucide="instagram" width="14" height="14"></i> @hicookielem</a>
+        <a href="https://wa.me/5577998048557" target="_blank"><i data-lucide="phone" width="14" height="14"></i> (77) 99804-8557</a>
       </div>
     </div>
   </div>
-</section>
 
-<!-- CATEGORIAS -->
-<section id="categorias">
-  <div class="container">
-    <p class="section-label">Especialidades</p>
-    <h2 class="section-title reveal">Nossas Categorias</h2>
-    <p class="section-subtitle reveal">Temos opções para todos os momentos especiais da sua vida</p>
-    <div class="cat-grid" id="cat-grid"></div>
-  </div>
-</section>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="container">
+      <div class="logo-container">
+        <img src="/images/logo.jpg" alt="Hi Cookie Logo" class="logo-img">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio" class="active">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#comofunciona">Como funciona</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a href="https://wa.me/5577998048557" class="btn-nav">
+        <i data-lucide="cookie" width="16" height="16"></i> Fazer meu pedido
+      </a>
+    </div>
+  </nav>
 
-<!-- GALERIA -->
-<section class="gallery-section" id="galeria">
-  <div class="container">
-    <p class="section-label">Portfólio</p>
-    <h2 class="section-title reveal">Nossa Galeria</h2>
-    <p class="section-subtitle reveal">Clique em qualquer cookie para ver os detalhes</p>
-    <div class="gallery-filters" id="gallery-filters"></div>
-    <div class="gallery-grid" id="gallery-grid"></div>
-  </div>
-</section>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Biscoitos Personalizados</span>
+        <h1>Transformamos momentos em <span class="script">doces obras de arte ♥</span></h1>
+        <p class="hero-desc">Biscoitos artesanais decorados com glacê real, feitos com amor para celebrar o que realmente importa.</p>
+        
+        <div class="hero-features">
+          <div class="feature-item">
+            <div class="feature-icon"><i data-lucide="party-popper"></i></div>
+            <p>Personalizados para festas</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i data-lucide="briefcase"></i></div>
+            <p>Corporativos para empresas</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i data-lucide="coffee"></i></div>
+            <p>Linha café amanteigados</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i data-lucide="gift"></i></div>
+            <p>Kits presenteáveis</p>
+          </div>
+        </div>
 
-<!-- MODAL -->
-<div class="modal-bg" id="modal" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()" aria-label="Fechar">✕</button>
-    <img id="modal-img" class="modal-img" src="" alt="">
-    <div class="modal-body">
-      <p class="modal-occasion" id="modal-occasion"></p>
-      <h2 id="modal-title"></h2>
-      <p class="desc" id="modal-desc"></p>
-      <p style="font-size:.85rem;color:#7A6565;margin-bottom:16px" id="modal-min"></p>
-      <div class="modal-techniques" id="modal-tech"></div>
-      <div class="modal-cta">
-        <a href="https://wa.me/5577998048557?text=Olá! Tenho interesse neste cookie 🍪" target="_blank" rel="noopener noreferrer" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.496A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-          Pedir este Cookie
+        <div class="hero-btn-container">
+          <a href="https://wa.me/5577998048557" class="btn-primary">
+            <i data-lucide="message-circle"></i> Quero meu orçamento
+          </a>
+          <span class="hero-note"><i data-lucide="info" width="14" height="14"></i> Produção limitada por semana. Garanta sua data com antecedência!</span>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="/images/05-bela-e-a-fera.jpg" alt="Cookies decorados">
+        <div class="hero-stamp">
+          <span class="script">Com amor para você</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="about-image">
+        <img src="/images/owner.jpg" alt="Raiane - Hi Cookie">
+        <div class="about-stamp">
+          <span class="script">Feito à mão<br>com amor</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-label">QUEM FAZ</span>
+        <h2>Prazer, eu sou a <span class="script">Raiane! ♥</span></h2>
+        <p>Bacharel em Administração, mãe de dois, esposa e cristã. Sou apaixonada por transformar ideias em biscoitos cheios de significado e carinho.</p>
+        <p>A Hi Cookies nasceu do amor pelos detalhes e pela vontade de transformar algo simples em algo inesquecível.</p>
+        <div class="about-highlight">
+          <em>Aqui não tem frescura... só verdade, afeto e muito biscoito bonito (e gostoso!).</em>
+        </div>
+        <a href="#contato" class="btn-primary">Conhecer minha história</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories" id="produtos">
+    <div class="container">
+      <span class="section-label">NOSSAS CATEGORIAS</span>
+      <h2>Temos o biscoito perfeito<br>para cada momento <span class="script" style="font-size:3rem">♥</span></h2>
+      
+      <div class="categories-grid" id="cat-grid">
+        <!-- JS generates these -->
+        <div class="category-card">
+          <img src="/images/07-cha-bebe-completo.jpg" class="category-img" alt="Chá de bebê">
+          <div class="category-icon">🎀</div>
+          <h3>Chá de bebê & 1º Aninho</h3>
+          <p>Delicadeza para celebrar os primeiros momentos.</p>
+          <button class="btn-outline">Ver opções</button>
+        </div>
+        <div class="category-card">
+          <img src="/images/04-batizado-ovelhinha.jpg" class="category-img" alt="Batizado">
+          <div class="category-icon">✝️</div>
+          <h3>Batizado & Religioso</h3>
+          <p>Fé, significado e carinho em cada detalhe.</p>
+          <button class="btn-outline">Ver opções</button>
+        </div>
+        <div class="category-card">
+          <img src="/images/03-corrida-carrinhos.jpg" class="category-img" alt="Aniversário">
+          <div class="category-icon">🎂</div>
+          <h3>Aniversário Infantil</h3>
+          <p>Cores, alegria e biscoitos que encantam.</p>
+          <button class="btn-outline">Ver opções</button>
+        </div>
+        <div class="category-card">
+          <img src="/images/06-pokemon.jpg" class="category-img" alt="Personagens">
+          <div class="category-icon">⭐</div>
+          <h3>Personagens & Tema Livre</h3>
+          <p>O tema que você ama transformado em biscoito.</p>
+          <button class="btn-outline">Ver opções</button>
+        </div>
+        <div class="category-card">
+          <img src="/images/08-limao-siciliano.jpg" class="category-img" alt="Linha Café">
+          <div class="category-icon">☕</div>
+          <h3>Linha Café & Kits Especiais</h3>
+          <p>Perfeitos para presentear ou para o seu café.</p>
+          <button class="btn-outline">Ver opções</button>
+        </div>
+      </div>
+      
+      <a href="#produtos" class="btn-primary">Ver todas as categorias</a>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="comofunciona">
+    <div class="container">
+      <div class="hiw-left">
+        <span class="section-label">COMO FUNCIONA</span>
+        <h2>É fácil encomendar<br>seu biscoito <span class="script" style="font-size:2.5rem">♥</span></h2>
+      </div>
+      <div class="hiw-right">
+        <div class="hiw-steps">
+          <div class="step">
+            <div class="step-icon"><i data-lucide="smartphone" color="#d9788d"></i><span class="step-number">1</span></div>
+            <p>Você escolhe o estilo ou tem uma ideia</p>
+          </div>
+          <div class="step">
+            <div class="step-icon"><i data-lucide="message-square" color="#d9788d"></i><span class="step-number">2</span></div>
+            <p>Me chama no WhatsApp</p>
+          </div>
+          <div class="step">
+            <div class="step-icon"><i data-lucide="clipboard-list" color="#d9788d"></i><span class="step-number">3</span></div>
+            <p>Definimos todos os detalhes</p>
+          </div>
+          <div class="step">
+            <div class="step-icon"><i data-lucide="heart" color="#d9788d"></i><span class="step-number">4</span></div>
+            <p>Produção feita com muito carinho</p>
+          </div>
+          <div class="step">
+            <div class="step-icon"><i data-lucide="package" color="#d9788d"></i><span class="step-number">5</span></div>
+            <p>Entrega combinada com você</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="depoimentos">
+    <div class="container">
+      <div class="testi-left">
+        <span class="section-label">O QUE NOSSAS CLIENTES DIZEM</span>
+        <h2>Palavras que aquecem o coração</h2>
+      </div>
+      <div class="testi-right">
+        <div class="testi-grid">
+          <div class="testi-card">
+            <p class="testi-text">"Simplesmente perfeito! Cada detalhe impecável e delicioso. Amei demais!"</p>
+            <div class="stars">★★★★★</div>
+            <div class="testi-user">
+              <img src="/images/logo.jpg" alt="User">
+              <div class="user-info">
+                <h4>Juliana M.</h4>
+                <p>Chá de Bebê</p>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <p class="testi-text">"Os biscoitos fizeram o maior sucesso no aniversário do meu filho. Lindos e deliciosos!"</p>
+            <div class="stars">★★★★★</div>
+            <div class="testi-user">
+              <img src="/images/logo.jpg" alt="User">
+              <div class="user-info">
+                <h4>Carla S.</h4>
+                <p>Aniversário Infantil</p>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <p class="testi-text">"Atendimento incrível e muito capricho. Já virei cliente fiel!"</p>
+            <div class="stars">★★★★★</div>
+            <div class="testi-user">
+              <img src="/images/logo.jpg" alt="User">
+              <div class="user-info">
+                <h4>Fernanda A.</h4>
+                <p>Linha Café</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BLOCK -->
+  <section class="cta-section" id="contato">
+    <div class="cta-block">
+      <div class="cta-content">
+        <h2>Vamos criar algo incrível juntas? <span class="script">♥</span></h2>
+        <p>Me conta sua ideia e eu transformo em biscoitos que encantam!</p>
+        <a href="https://wa.me/5577998048557" class="btn-primary">
+          <i data-lucide="message-circle"></i> Falar no WhatsApp
         </a>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
-<section class="cta-section" id="contato">
-  <div class="container">
-    <p class="section-label" style="color:rgba(255,255,255,.5)">Faça seu Pedido</p>
-    <h2 class="reveal">Vamos criar algo especial juntos?</h2>
-    <p class="reveal">Entre em contato e conte-nos sobre o seu evento. Criamos cookies personalizados para tornar cada momento inesquecível.</p>
-    <div class="cta-buttons reveal">
-      <a href="https://wa.me/5577998048557?text=Olá! Gostaria de fazer um pedido de cookies 🍪" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.496A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-        WhatsApp
-      </a>
-      <a href="https://www.instagram.com/hicookielem?igsh=MWxrNDJibTFtdnNuYg==" target="_blank" rel="noopener noreferrer" class="btn-instagram">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        Instagram
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- WHATSAPP FAB -->
-<a href="https://wa.me/5577998048557?text=Olá! Gostaria de saber mais sobre os cookies 🍪" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.496A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-</a>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-logo"><img src="/images/logo.jpg" alt="Hi Cookie Logo" class="brand-logo-footer"> Hi <span>Cookie</span></div>
-    <p>Biscoitos Decorados Artesanais</p>
-    <p>Lem — Bahia</p>
-    <div class="footer-copy">
-      <p>&copy; 2026 Hi Cookie. Todos os direitos reservados.</p>
-      <div class="footer-dev">
-        <span>Site desenvolvido por</span>
-        <img src="/images/blackdev-logo.png" alt="BlackDev" class="footer-dev-logo">
-        <a href="https://instagram.com/blackdev.777" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:4px;"><strong>BlackDev</strong> <span>@blackdev.777</span></a>
+      <div class="cta-image">
+        <img src="/images/01-cha-de-bebe-bonequinha.jpg" alt="Caixa de cookies">
+        <div class="cta-stamp">
+          <p>Cada biscoito conta uma história</p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<script src="/app.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-logo">
+          <img src="/images/logo.jpg" alt="Hi Cookie Logo" class="logo-img">
+          <p class="footer-desc">Biscoitos personalizados que transformam momentos em memórias inesquecíveis.</p>
+          <div style="margin-top:16px;display:flex;gap:12px">
+            <a href="#"><i data-lucide="instagram" width="20" height="20"></i></a>
+            <a href="#"><i data-lucide="message-circle" width="20" height="20"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#comofunciona">Como funciona</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informações</h4>
+          <ul>
+            <li><i data-lucide="clock" width="14" height="14"></i> Atendemos sob encomenda</li>
+            <li><i data-lucide="alert-circle" width="14" height="14"></i> Produção limitada por semana</li>
+            <li><i data-lucide="calendar" width="14" height="14"></i> Prazo médio: 5 a 10 dias úteis</li>
+            <li><i data-lucide="map-pin" width="14" height="14"></i> Luís Eduardo Magalhães - BA</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Fale comigo</h4>
+          <p><i data-lucide="phone" width="14" height="14"></i> (77) 99804-8557</p>
+          <p><i data-lucide="instagram" width="14" height="14"></i> @hicookielem</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hi Cookies. Todos os direitos reservados.</p>
+        <div class="footer-dev">
+          <span>Site desenvolvido por</span>
+          <img src="/images/blackdev-logo.png" alt="BlackDev" class="footer-dev-logo">
+          <a href="https://instagram.com/blackdev.777" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;"><strong>BlackDev</strong> <span>@blackdev.777</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/5577998048557" class="whatsapp-fab" target="_blank">
+    <i data-lucide="message-circle" color="white" width="28" height="28"></i>
+  </a>
+
+  <!-- INITIALIZE LUCIDE ICONS -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="/app.js"></script>
 </body>
 </html>
